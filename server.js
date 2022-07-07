@@ -22,6 +22,9 @@ app.get('/status', (req, res)=>{
 
 app.post('/single', upload.single('image'),(req, res)=>{
     console.log(req.file);
+    if(res.file){
+        res.end({status: 'OK', message:'File upload Success', url: req.file.path})
+    }
     res.send("image File upload success");
 })
 
