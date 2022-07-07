@@ -22,7 +22,7 @@ app.get('/status', (req, res)=>{
 
 app.post('/single', upload.single('image'),(req, res)=>{
     console.log(req.file);
-    res.send("single File upload success");
+    res.send("image File upload success");
 })
 
 app.listen(4000, ()=>{
